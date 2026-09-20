@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster - Interactive Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>QuizMaster</h1>
+        <p>Interactive Multiple-Choice Quiz</p>
+      </div>
+      <button id="homeBtn" class="small-btn hidden">Home</button>
+    </header>
+
+    <main>
+      <!-- Topic selection -->
+      <section id="topicScreen" class="screen active">
+        <div class="hero">
+          <h2>Choose Your Topic</h2>
+          <p>Select a topic and test your knowledge.</p>
+        </div>
+        <div id="topicGrid" class="topic-grid"></div>
+      </section>
+
+      <!-- Quiz -->
+      <section id="quizScreen" class="screen">
+        <div class="quiz-top">
+          <div>
+            <span id="topicName"></span>
+            <h2 id="questionNumber"></h2>
+          </div>
+          <div class="score-box">Score: <span id="liveScore">0</span></div>
+        </div>
+
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+
+        <div class="question-card">
+          <h2 id="questionText"></h2>
+          <div id="options"></div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="nextBtn" class="primary-btn" disabled>Next Question</button>
+        </div>
+      </section>
+
+      <!-- Result -->
+      <section id="resultScreen" class="screen">
+        <div class="result-card">
+          <div class="trophy">🏆</div>
+          <h2>Quiz Completed!</h2>
+          <p id="resultMessage"></p>
+          <div class="result-score">
+            <span id="finalScore">0</span>
+            <small id="totalQuestions">/ 0</small>
+          </div>
+          <p id="percentage"></p>
+          <div class="result-actions">
+            <button id="retryBtn" class="primary-btn">Try Again</button>
+            <button id="chooseBtn" class="secondary-btn">Choose Another Topic</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with HTML, CSS & JavaScript</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
